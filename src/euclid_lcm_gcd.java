@@ -21,6 +21,7 @@ public class euclid_lcm_gcd {
 	public static void main(String[] args) {
 		int val1, val2, gcd, lcm;
 		
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("첫 번째 수를 입력하세요.");
