@@ -3,7 +3,7 @@ package search;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SearchMain {
+public class SearchTestMain {
 
 	public static void main(String[] args) {
 

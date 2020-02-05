@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import comp.VO.StudentVO;
 
-public class compTest {
+public class compTestMain {
 
 	public static void main(String[] args) {
 
