@@ -19,12 +19,12 @@ public class IntStack <T> {
 		stack.add(x);
 		ptr ++;
 		
-		System.out.println("Stack Push ¿Ï·á");
+		System.out.println("Stack Push ì™„ë£Œ");
 	}
 	
 	public int pop()  {
 		if (ptr <= 0) {
-			System.out.println("²¨³¾ StackÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("êº¼ë‚¼ Stackì´ ì—†ìŠµë‹ˆë‹¤.");
 			return -1;
 		}
 		
@@ -34,7 +34,7 @@ public class IntStack <T> {
 	public void clear() {
 		stack.clear();
 		ptr = 0;
-		System.out.println("Stack Clear ¿Ï·á");
+		System.out.println("Stack Clear ï¿½ì…¿çŒ·ï¿½");
 	}
 	
 	public int checkPtr() {
