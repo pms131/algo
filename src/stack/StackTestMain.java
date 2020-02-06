@@ -9,7 +9,7 @@ public class StackTestMain {
 		IntStack<Integer> stack = new IntStack<>();
 		Scanner sc = new Scanner(System.in);
 		int key = 0;
-		System.out.print("0 : ÇÁ·Î±×·¥ Á¾·á, 1 : push, 2 : pop, 3: clear, "
+		System.out.print("0 : í”„ë¡œê·¸ë¨ ì¢…ë£Œ, 1 : push, 2 : pop, 3: clear, "
 							+ "4 : stackSize, 5 : peek, 6 : search : ");
 		
 		while ( (key = sc.nextInt() ) != 0) {
@@ -17,41 +17,41 @@ public class StackTestMain {
 			case 0:
 				break;
 			case 1:
-				System.out.print("push ÇÒ °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+				System.out.print("push í•  ê°’ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 				int val = sc.nextInt();
 				stack.push(val);
 				break;
 			case 2:
 				int pop = stack.pop();
 				if (pop != -1)
-					System.out.println("pop°ªÀº " + pop + " ÀÔ´Ï´Ù.");
+					System.out.println("popê°’ì€ " + pop + " ì…ë‹ˆë‹¤.");
 				break;
 			case 3:
 				stack.clear();
-				break;
+				break; 
 			case 4:
 				int ptr = stack.checkPtr();
-				System.out.println("ÇöÀç ptrÀÇ À§Ä¡´Â " + ptr + " ÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ ptrì˜ ìœ„ì¹˜ëŠ” " + ptr + " ì…ë‹ˆë‹¤.");
 				break;
 			case 5:
 				int peek = stack.peek();
-				System.out.println("ÇöÀç peek °ªÀº : " + peek + " ÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ peek ê°’ì€ : " + peek + " ì…ë‹ˆë‹¤.");
 				break;
 			case 6:
-				System.out.print("Ã£À¸½Ç °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+				System.out.print("ì°¾ìœ¼ì‹¤ ê°’ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 				int searchVal = sc.nextInt();
 				int searchKey = stack.search(searchVal);
 				
 				if (searchKey == -1) 
-					System.out.println("Ã£À¸½Ã´Â °ªÀÌ ¾ø½À´Ï´Ù.");
+					System.out.println("ì°¾ìœ¼ì‹œëŠ” ê°’ì´ ì—†ìŠµë‹ˆë‹¤.");
 				else
-					System.out.println(searchKey + " ¹øÂ° Stack¿¡ " + searchVal + " ÀÌ ÀÖ½À´Ï´Ù."); 
+					System.out.println(searchKey + " ë²ˆì§¸ Stackì— " + searchVal + " ì´ ìˆìŠµë‹ˆë‹¤."); 
 				break;
 			default:
 				break;
 			}
 
-			System.out.print("0 : ÇÁ·Î±×·¥ Á¾·á, 1 : push, 2 : pop, 3: clear, "
+			System.out.print("0 : í”„ë¡œê·¸ë¨ ì¢…ë£Œ, 1 : push, 2 : pop, 3: clear, "
 					+ "4 : checkPtr, 5 : peek, 6 : search : ");
 		};
 	}
