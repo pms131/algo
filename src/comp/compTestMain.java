@@ -13,14 +13,14 @@ public class compTestMain {
 
 		
 		StudentVO[] array = {
-				new StudentVO("ÇĞ»ı1", 170, 1.5),
-				new StudentVO("ÇĞ»ı2", 180, 1.2)
+				new StudentVO("í•™ìƒ1", 170, 1.5),
+				new StudentVO("í•™ìƒ2", 180, 1.2)
 		};
 		
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Ã£À¸½Ã·Á´Â Å° °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.println("ì°¾ìœ¼ì‹œë ¤ëŠ” í‚¤ ê°’ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		int height = -1;
 		
 		while ((height = sc.nextInt()) != -1) {
@@ -30,15 +30,15 @@ public class compTestMain {
 			int result = Arrays.binarySearch(array, key, StudentVO.HEIGHT_ORDER);
 			
 			if (result < 0) {
-				System.out.println("Ã£À¸½Ã´Â Å°¸¦ °¡Áø ÇĞ»ıÀÌ ¾ø½À´Ï´Ù.");
+				System.out.println("ì°¾ìœ¼ì‹œëŠ” í‚¤ë¥¼ ê°€ì§„ í•™ìƒì´ ì—†ìŠµë‹ˆë‹¤.");
 			} else {
-				System.out.println(result + 1 + "¹øÂ° ÇĞ»ı ÀÔ´Ï´Ù.");
+				System.out.println(result + 1 + "ë²ˆì§¸ í•™ìƒ ì…ë‹ˆë‹¤.");
 				System.out.println(array[result]);
 			}
 			
-			System.out.println("Ã£À¸½Ã·Á´Â Å° °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.println("ì°¾ìœ¼ì‹œë ¤ëŠ” í‚¤ ê°’ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		} ;
 		
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 }

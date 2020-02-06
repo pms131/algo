@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class SelectionSort extends Sort {
 	public SelectionSort() {
-		System.out.println("## ¼±ÅÃ Á¤·Ä ½ÃÀÛ ##");
+		System.out.println("## ì„ íƒ ì •ë ¬ ì‹œì‘ ##");
 	}
 
 	@Override
 	protected ArrayList<Integer> doSort(ArrayList<Integer> array) {
-		// TODO ¼±ÅÃ Á¤·Ä ±¸Çö
+		// TODO ì„ íƒ ì •ë ¬ êµ¬í˜„
 		return null;
 	}
 

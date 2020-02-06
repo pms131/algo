@@ -9,7 +9,7 @@ public class SortingTestMain {
 
 		int idx, key;
 
-		System.out.print("¹è¿­ÀÇ Å©±â : ");
+		System.out.print("í…ŒìŠ¤íŠ¸Â® : ");
 
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);

@@ -9,7 +9,7 @@ public class SearchTestMain {
 
 		int idx, key, result;
 
-		System.out.print("¹è¿­ÀÇ Å©±â : ");
+		System.out.print("ë°°ì—´ì˜ í¬ê¸° : ");
 
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -29,23 +29,23 @@ public class SearchTestMain {
 				System.out.println(sb);
 		}
 
-		System.out.print("°Ë»öÇÒ °ª : ");
+		System.out.print("ê²€ìƒ‰í•  ê°’ : ");
 		key = sc.nextInt();
 
-		/**************** ¼±Çü °Ë»ö ****************/
+		/**************** ì„ í˜• ê²€ìƒ‰ ****************/
 		/*
 		Search linear = new LinearSearch();
 		result = linear.doSearch(array, idx, key);				 
 		*/
 				
-		/**************** ÀÌÁø °Ë»ö ****************/
+		/**************** ì´ì§„ ê²€ìƒ‰ ****************/
 		Search binary = new BinarySearch();			
 		result = binary.doSearch(array, idx, key);
 
 		if (result == -1)
-			System.out.println("Ã£À¸½Ã´Â °ªÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì°¾ìœ¼ì‹œëŠ” ê°’ì´ ì—†ìŠµë‹ˆë‹¤.");
 		else
-			System.out.println(key + " °ªÀº " + result + "¹øÂ° ¸®½ºÆ®¿¡ ÀÖ½À´Ï´Ù.");
+			System.out.println(key + " ê°’ì€ " + result + "ë²ˆì§¸ ë¦¬ìŠ¤íŠ¸ì— ìˆìŠµë‹ˆë‹¤.");
 	}
 
 }
