@@ -34,7 +34,7 @@ public class IntStack <T> {
 	public void clear() {
 		stack.clear();
 		ptr = 0;
-		System.out.println("Stack Clear �셿猷�");
+		System.out.println("Stack Clear 완료");
 	}
 	
 	public int checkPtr() {
