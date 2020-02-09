@@ -54,5 +54,7 @@ public class StackTestMain {
 			System.out.print("0 : 프로그램 종료, 1 : push, 2 : pop, 3: clear, "
 					+ "4 : checkPtr, 5 : peek, 6 : search : ");
 		};
+
+		sc.close();
 	}
 }

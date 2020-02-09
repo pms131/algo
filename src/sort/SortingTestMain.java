@@ -7,7 +7,7 @@ public class SortingTestMain {
 
 	public static void main(String[] args) {
 
-		int idx, key;
+		int idx;
 
 		System.out.print("테스트® : ");
 

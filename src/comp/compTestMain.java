@@ -1,8 +1,6 @@
 package comp;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 import comp.VO.StudentVO;
@@ -40,5 +38,6 @@ public class compTestMain {
 		} ;
 		
 		System.out.println("프로그램 종료");
+		sc.close();
 	}
 }
