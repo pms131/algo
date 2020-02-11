@@ -5,3 +5,6 @@
 /bin/
 target/
 *.class
+.vscode/settings.json
+/bin/
+.vscode/launch.json
