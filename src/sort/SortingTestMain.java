@@ -32,9 +32,10 @@ public class SortingTestMain {
 			}
 			//Sort selectionSort = new SelectionSort();
 			//Sort bubbleSort = new BubbleSort();
-			Sort insertSort = new InsertSort();
+			//Sort insertSort = new InsertSort();
+			Sort shellSort = new ShellSort();
 			
-			ArrayList<Integer> result = insertSort.doSort(array);
+			ArrayList<Integer> result = shellSort.doSort(array);
 			
 			System.out.println(result);
 			
