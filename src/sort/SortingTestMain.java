@@ -30,10 +30,11 @@ public class SortingTestMain {
 				else
 					System.out.println(sb);
 			}
-			Sort selectionSort = new SelectionSort();
+			//Sort selectionSort = new SelectionSort();
 			//Sort bubbleSort = new BubbleSort();
+			Sort insertSort = new InsertSort();
 			
-			ArrayList<Integer> result = selectionSort.doSort(array);
+			ArrayList<Integer> result = insertSort.doSort(array);
 			
 			System.out.println(result);
 			
