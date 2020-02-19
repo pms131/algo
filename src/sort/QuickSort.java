@@ -19,12 +19,12 @@ public class QuickSort extends Sort {
 		int left = 0;
 		int right = array.size() -1;	
 		
-		quickSort(array, left, right);		
+		recursiveQuickSort(array, left, right);		
 		
 		return array;
 	}
 	
-	private void quickSort(ArrayList<Integer> array, int left, int right) {
+	private void recursiveQuickSort(ArrayList<Integer> array, int left, int right) {
 		int pl = left;
 		int pr = right;
 		int pivot = (pl + pr) / 2;	
@@ -41,9 +41,9 @@ public class QuickSort extends Sort {
 		} while (pl <= pr);
 		
 		if (pl < right)
-			quickSort(array, pl, right);
+			recursiveQuickSort(array, pl, right);
 		if (pr > left)
-			quickSort(array, left, pr);
+			recursiveQuickSort(array, left, pr);
 		
 	}
 	
