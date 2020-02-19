@@ -30,12 +30,11 @@ public class SortingTestMain {
 				else
 					System.out.println(sb);
 			}
-			//Sort selectionSort = new SelectionSort();
-			//Sort bubbleSort = new BubbleSort();
-			//Sort insertSort = new InsertSort();
-			Sort shellSort = new ShellSort();
+
+			//정렬에 따라 바꿔가면서 사용
+			Sort sort = new QuickSort();
 			
-			ArrayList<Integer> result = shellSort.doSort(array);
+			ArrayList<Integer> result = sort.doSort(array);
 			
 			System.out.println(result);
 			
