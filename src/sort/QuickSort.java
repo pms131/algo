@@ -24,6 +24,14 @@ public class QuickSort extends Sort {
 		return array;
 	}
 	
+	
+	/**
+	 * 재귀를 활용한 퀵 정렬
+	 * 
+	 * @param array
+	 * @param left
+	 * @param right
+	 */
 	private void recursiveQuickSort(ArrayList<Integer> array, int left, int right) {
 		int pl = left;
 		int pr = right;
