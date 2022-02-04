@@ -66,11 +66,14 @@ public class OpenChatRoom {
         }
 
         List<String> chgStrList = answerList.stream()
-                .flatMap(s -> userMap.entrySet()
-                        .stream()
-                        .filter(e -> s.contains(e.getKey()))
-                        .map(mapEntry -> s.replace(mapEntry.getKey(), mapEntry.getValue()))
-                ).collect(Collectors.toList());
+                .map(str -> userMap.entrySet()
+                                    .stream()
+                                    .filter(mapEntry -> str.contains(mapEntry.getKey()))
+                                    .map(mapEntry -> str.replace(mapEntry.getKey(), mapEntry.getValue()))
+                                    .findFirst().orElseGet(null)
+                )
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
 
 
         String[] answer = new String[chgStrList.size()];
