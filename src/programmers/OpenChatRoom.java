@@ -5,25 +5,29 @@ package programmers;
 import java.util.*;
 import java.util.stream.Collectors;
 
-enum CommandList {
-    Enter("님이 들어왔습니다."),
-    Leave("님이 나갔습니다."),
-    Change("");
 
-    private final String Value;
-
-    CommandList( String value ) {
-        Value = value;
-    }
-
-    public String getValue() {
-        return Value;
-    }
-}
 
 
 public class OpenChatRoom {
-    //private static final String[] verbList = { "Enter", "Leave", "Change" };
+
+    private static final String token = "님이";
+
+    enum CommandList {
+        Enter(token + " 들어왔습니다."),
+        Leave(token + " 나갔습니다."),
+        Change("");
+
+        private final String Value;
+
+        CommandList( String value ) {
+            Value = value;
+        }
+
+        public String getValue() {
+            return Value;
+        }
+    }
+
     public static void main( String[] args ) {
         String[] record = {"Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"};
 
@@ -63,22 +67,29 @@ public class OpenChatRoom {
             }
         }
 
-        List<String> chgStrList = answerList.stream()
-                .map(str -> userMap.entrySet()
-                                    .stream()
-                                    .filter(mapEntry -> str.startsWith(mapEntry.getKey() + "님"))
-                                    .map(mapEntry -> str.replace(mapEntry.getKey(), mapEntry.getValue()))
-                                    .findFirst().orElseGet(null)
-                )
+        String[] answer = new String[answerList.size()];
+
+        for (int idx = 0; idx < answerList.size(); idx++) {
+            String keyStr = answerList.get(idx).split(token)[0];
+            String replace = answerList.get(idx).replace(keyStr, userMap.get(keyStr));
+
+            answer[idx] = replace;
+        }
+
+        /* Stream 코드
+        List<String> chgStrList = answerList.stream().map(str -> {
+            String key = str.split(token)[0];
+            return str.replace(key, userMap.get(key));
+        })
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
-
 
         String[] answer = new String[chgStrList.size()];
 
         for (int idx = 0; idx < chgStrList.size(); idx++) {
+
             answer[idx] = chgStrList.get(idx);
-        }
+        }*/
         
         return answer;
     }
