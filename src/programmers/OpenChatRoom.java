@@ -66,7 +66,7 @@ public class OpenChatRoom {
         List<String> chgStrList = answerList.stream()
                 .map(str -> userMap.entrySet()
                                     .stream()
-                                    .filter(mapEntry -> str.contains(mapEntry.getKey()))
+                                    .filter(mapEntry -> str.startsWith(mapEntry.getKey() + "님"))
                                     .map(mapEntry -> str.replace(mapEntry.getKey(), mapEntry.getValue()))
                                     .findFirst().orElseGet(null)
                 )
