@@ -61,7 +61,7 @@ public class MineralMining {
                 } else if (ironPick != 0) {
                     ironPickUse = true;
 
-                    if (DIAMOND.equals(mineral)) {
+                    if (mineral.equals(DIAMOND)) {
                         answer += 5;
                     } else {
                         answer += 1;
@@ -69,12 +69,10 @@ public class MineralMining {
                 } else {
                     stonePickUse = true;
 
-                    if (DIAMOND.equals(mineral)) {
-                        answer += 25;
-                    } else if (IRON.equals(mineral)) {
-                        answer += 5;
-                    } else {
-                        answer += 1;
+                    switch (mineral) {
+                        case DIAMOND -> answer += 25;
+                        case IRON -> answer += 5;
+                        default -> answer += 1;
                     }
                 }
             }
